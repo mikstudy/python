@@ -1,7 +1,7 @@
 * 출처
-  점프 투 파이썬: [https://wikidocs.net/4307](https://wikidocs.net/4307)
-  나무위키: [https://namu.wiki/w/Python#s-3](https://namu.wiki/w/Python#s-3)
-  네이버 O2: [http://d2.naver.com/helloworld/1114](http://d2.naver.com/helloworld/1114)
+  점프 투 파이썬: [https://wikidocs.net/4307](https://wikidocs.net/4307)  
+  나무위키: [https://namu.wiki/w/Python#s-3](https://namu.wiki/w/Python#s-3)  
+  네이버 O2: [http://d2.naver.com/helloworld/1114](http://d2.naver.com/helloworld/1114)  
 
 
 ###Python?
