@@ -1,5 +1,5 @@
-* 출처
-  예제로 배우는 Python 프로그래밍: [http://pythonstudy.xyz/python/django](http://pythonstudy.xyz/python/django)
+* 출처</br>
+  예제로 배우는 Python 프로그래밍: [http://pythonstudy.xyz/python/django](http://pythonstudy.xyz/python/django)</br>
   Django Girls Tutorial: [https://tutorial.djangogirls.org/ko/django/](https://tutorial.djangogirls.org/ko/django/)
 
 
@@ -18,7 +18,7 @@
    Git Reposotory 서비스.
 
 ### Django의 특징
-  - ORM(Object-Relational Mapping) 추상화 계층
+  - ORM(Object-Relational Mapping) 추상화 계층</br>
     Django에는 DB Adaptor와 유저 프로그램 사이에 자료형의 변환작업을 자동으로 수행해주는 ORM(Object-Relational Mapping)계층이 존재.
     Model을 설계할 때 파이썬에서 사용하는 자료형들을 그대로 사용할 수 있으며, Table에 정확히 어떤 Type의 Field로 저장되는지 신경쓸 필요가 없다.
 	```python
@@ -30,8 +30,17 @@
 
 	users = User.objects.all()
     ```
-    
-  - Backend Console
+   ```language
+   SELECT --> Est.objects.all() 
+           --> Est.objects.filter(id__contains='1')
+           --> exclude, get, count,...
+  INSERT --> Est.objects.create(name='a',...)
+  UPDATE --> est = Est.objects.get(id=1)
+               est.name = b; est.save()
+  DELETE --> est.delete()
+   ```
+   
+  - Backend Console</br>
 	Django에서는 백엔드 콘솔로 제공되는 `manage.py`를 사용해서 모든 백엔드 관리를 수행할 수 있다.
     예를 들어, 완성한 프로젝트를 서버에 옮긴 뒤 다음 명령을 실행하면 설치된 모듈(App)에 정의된 Model들을 검사해서 필요한 DB Table들을 자동으로 생성
     ```bash
@@ -39,7 +48,7 @@
 	```
     기본적으로 제공되는 Command 외에, 별도로 Custom Command를 정의해서 manage.py에서 실행 가능하도록 할 수 있다. 각 모듈(App)내에 필요한 명령들을 정의해놓으면 manage.py에서 이 명령을 찾아내서 실행할 수 있다.
 
-  - 모듈화 구성과 모듈의 독립성
+  - 모듈화 구성과 모듈의 독립성</br>
     Django는 사이트의 기반이 되는 프로젝트(Sitebase)와 특정 기능을 수행하는 모듈(App)들이 상호 독립적. 따라서 모듈에서 사용하는 Model들은 각 모듈 디렉토리 내에 정의하게 되어 있고, 이미지나 CSS등의 Static File들도 각 모듈 디렉토리 내에 각각 따로 저장하도록 되어 있다.
 
   **프로젝트(Sitebase)**는 Python환경이나 DB설정, URL Routing과 같이 사이트 전역에 적용되는 자원과 설정들을 관리하고, 관리를 위한 Backend Console을 제공
@@ -107,4 +116,25 @@ python -m venv [생성한 가상환경이름] - 가상환경 실행
   
   #특정포트 사용(8080) 사용시
   python manage.py runserver 8080
+```
+
+### Django HelloWorld!
+- views.py 추가
+```python
+from django.http import HttpResponse
+
+def hello(request):
+    return HttpResponse("Hello world")
+```
+
+- urls.py 수정
+```python
+from django.conf.urls import url
+from django.contrib import admin
+from HelloWorld.views import hello
+
+urlpatterns = [
+    #url(r'^admin/', admin.site.urls),
+    url(r'^hello/$', hello),
+]
 ```
