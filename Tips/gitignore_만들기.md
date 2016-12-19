@@ -28,9 +28,10 @@
  * 위에서 나열한 확장자들 이외에 여러가지 추가 파일들이 있으므로 이를 매번 기억할 수 없기 때문에,  
    `.gitignore`를 만들어 주는 써드파티 툴들이 몇몇 있다.
    * [https://www.gitignore.io/](https://www.gitignore.io/)에서 프로젝트 언어에 알맞는 `.gitignore` 파일을 만들 수 있다.
-   * OS X, Linux에선 파일명이 없는 파일을 만들 수 있지만, Windows는 간단하지 않으므로 다음과 같이 한다.
+   * OS X, Linux에선 파일명이 없는 파일을 만들 수 있지만, Windows는 간단하지 않으므로 다음과 같이 한다.  
+   
      ```bash
      # 메모장에서 gitignore.txt 파일 생성.
      # gitignore.txt 파일이 있는 폴더에서 명령 프롬프트를 띄워서 다음과 같이 파일명을 변경한다.
      $ ren gitignore.txt .gitignore
-	 ```
+     ```
