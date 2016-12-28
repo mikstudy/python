@@ -84,7 +84,6 @@ class DatabaseTest(unittest.TestCase):
 
 if __name__ == "__main__":
   unittest.main()
-```language
 ```
 
 ### 실패한 테스트만 실행하기
