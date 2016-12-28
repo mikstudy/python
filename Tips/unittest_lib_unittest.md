@@ -87,7 +87,7 @@ if __name__ == "__main__":
 ```
 
 ### 실패한 테스트만 실행하기
-```python
+```bash
 # example
 $ python <테스트_소스>.py <테스트_케이스.테스트_함수>
 
@@ -97,7 +97,7 @@ $ python test1.py DatabaseTest.test_connect
 
 
 ### 여러개의 테스트 파일을 한꺼번에 실행하기
-```python
+```bash
 $ python -m unittest discover
 ```
 
